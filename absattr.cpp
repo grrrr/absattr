@@ -124,27 +124,35 @@ protected:
 
     virtual void CbLoadbang() 
     { 
-        // all loadbangs have the same logical time
-    	double time = GetTime();
+        if(parent) {      
+            // we are a sub-abstraction, sharing a parent with others
 
-        Loadbangs::iterator it = loadbangs.find(parent);
-        if(it != loadbangs.end()) {
-            Loadbang &lb = it->second;
-            // found
-            if(lb.lasttime < time) {
-                // bang all objects with the same parent in the prioritized order
-                for(Objects::iterator oit = lb.obj.begin(); oit != lb.obj.end(); ++oit) {
-                    absattr *o = *oit;
-                    FLEXT_ASSERT(o);
-                    if(o->loadbang) o->m_bang();
+            // all loadbangs have the same logical time
+    	    double time = GetTime();
+
+            Loadbangs::iterator it = loadbangs.find(parent);
+            if(it != loadbangs.end()) {
+                Loadbang &lb = it->second;
+                // found
+                if(lb.lasttime < time) {
+                    // bang all objects with the same parent in the prioritized order
+                    for(Objects::iterator oit = lb.obj.begin(); oit != lb.obj.end(); ++oit) {
+                        absattr *o = *oit;
+                        FLEXT_ASSERT(o);
+                        if(o->loadbang) o->m_bang();
+                    }
+
+                    // set timestamp
+                    lb.lasttime = time;
                 }
-
-                // set timestamp
-                lb.lasttime = time;
             }
+            else
+                error("%s - not found in database");
         }
-        else
-            error("%s - not found in database");
+        else {
+            // loadbang only this
+            if(loadbang) m_bang();
+        }
     }
 
     void BangAttr(int ix)
