@@ -2,13 +2,13 @@
 
 absattr - patcher attributes
 
-Copyright (c) 2002-2006 Thomas Grill (gr@grrrr.org)
+Copyright (c) 2002-2007 Thomas Grill (gr@grrrr.org)
 For information on usage and redistribution, and for a DISCLAIMER OF ALL
 WARRANTIES, see the file, "license.txt," in this distribution.  
 
 */
 
-#define VERSION "0.2.0"
+#define VERSION "0.2.1"
 
 #include <flext.h>
 
@@ -44,8 +44,14 @@ public:
         Process(args.Count(),args.Atoms(),true);
 
         // add to loadbang registry
-        Objects &o = loadbangs[parent].obj;
-        o.insert(this);
+        Loadbangs::iterator it = loadbangs.find(parent);
+		if(it != loadbangs.end())
+			it->second.obj.insert(this);
+		else {
+			Loadbang &lb = loadbangs[parent];
+			lb.lasttime = -1;
+			lb.obj.insert(this);
+		}
     }
 
     ~absattr()
@@ -66,7 +72,7 @@ public:
             if(o.empty()) loadbangs.erase(it);
         }
         else
-            error("%s - not found in loadbang registry");
+            error("%s - not found in loadbang registry (parent=%i)",thisName(),parent);
     }
 
     //! dump parameters
@@ -147,7 +153,7 @@ protected:
                 }
             }
             else
-                error("%s - not found in database");
+                error("%s - not found in database",thisName());
         }
         else {
             // loadbang only this
@@ -257,6 +263,8 @@ private:
 
 	static void Setup(t_classid cl)
     {
+	    post("absattr " VERSION ", (C)2006-2007 Thomas Grill");
+
         sym_attributes = MakeSymbol("attributes");
         sym_loadbang = MakeSymbol("loadbang");
 
