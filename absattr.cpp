@@ -2,13 +2,15 @@
 
 absattr - patcher attributes
 
-Copyright (c) 2002-2007 Thomas Grill (gr@grrrr.org)
+Copyright (c) 2002-2008 Thomas Grill (gr@grrrr.org)
 For information on usage and redistribution, and for a DISCLAIMER OF ALL
 WARRANTIES, see the file, "license.txt," in this distribution.  
 
 */
 
-#define VERSION "0.2.1"
+#undef FLEXT_ATTRIBUTES
+
+#define VERSION "0.2.3"
 
 #include <flext.h>
 
@@ -27,7 +29,7 @@ class absattr
 public:
     absattr(int argc,const t_atom *argv)
           : parent(0),prior(0)
-          , loadbang(true)
+          , loadbang(true),echo(true)
     {
         AddInAnything("bang/get/set");
         AddInAnything("external attribute messages");
@@ -90,12 +92,14 @@ public:
 
     void m_set(int argc,const t_atom *argv)
     {
-        if(!argc && !IsSymbol(*argv))
+        if(!argc || !IsSymbol(*argv))
             post("%s - attribute must be given as first argument",thisName());
         else {
             const t_symbol *attr = GetSymbol(*argv);
             --argc,++argv;
             SetAttr(attr,argc,argv);
+            if(echo)
+                OutAttr(0,attr); // tell abstraction about the changed value
         }
     }
 
@@ -106,6 +110,7 @@ protected:
     int parent;  // don't change after inserting into registry
     float prior; // don't change after inserting into registry
     bool loadbang;
+    bool echo;
 
     AtomList args;
     AttrMap attrs;  
@@ -248,6 +253,8 @@ protected:
         }
     }
 
+    void ms_echo(bool e) { echo = e; }
+
 private:
 
     static const t_symbol *sym_attributes;
@@ -260,15 +267,17 @@ private:
     FLEXT_CALLBACK_S(m_getx);
     FLEXT_CALLBACK(m_dumpx);
     FLEXT_CALLBACK_V(m_set);
+    FLEXT_CALLBACK_B(ms_echo);
 
 	static void Setup(t_classid cl)
     {
-	    post("absattr " VERSION ", (C)2006-2007 Thomas Grill");
+	    post("absattr " VERSION ", (C)2006-2008 Thomas Grill");
 
         sym_attributes = MakeSymbol("attributes");
         sym_loadbang = MakeSymbol("loadbang");
 
         FLEXT_CADDMETHOD(cl,0,m_bang);
+        FLEXT_CADDMETHOD_(cl,0,"echo",ms_echo);
         FLEXT_CADDMETHOD_(cl,0,"get",m_get);
         FLEXT_CADDMETHOD_(cl,0,"getattributes",m_dump);
         FLEXT_CADDMETHOD_(cl,0,"set",m_set);

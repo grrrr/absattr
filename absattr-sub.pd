@@ -1,4 +1,4 @@
-#N canvas 307 422 577 517 12;
+#N canvas 307 383 581 521 12;
 #X obj 405 38 inlet;
 #X obj 47 420 print ARGS;
 #X obj 239 423 print ATTR;
@@ -26,6 +26,9 @@
 #X text 186 93 list attributes;
 #X obj 99 379 t a b;
 #X obj 126 450 print -----------------------;
+#X obj 150 323 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 167 322 echo \$1;
 #X connect 0 0 12 1;
 #X connect 4 0 12 0;
 #X connect 5 0 10 0;
@@ -40,3 +43,5 @@
 #X connect 22 0 12 0;
 #X connect 24 0 1 0;
 #X connect 24 1 25 0;
+#X connect 26 0 27 0;
+#X connect 27 0 12 0;

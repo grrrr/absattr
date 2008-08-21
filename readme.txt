@@ -1,11 +1,11 @@
 absattr - patcher attributes
 
-Copyright (c)2005-2006 Thomas Grill (gr@grrrr.org)
+Copyright (c)2005-2008 Thomas Grill (gr@grrrr.org)
 For information on usage and redistribution, and for a DISCLAIMER OF ALL
 WARRANTIES, see the file, "license.txt," in this distribution.  
 
 Donations for further development of the package are highly appreciated.
-Visit https://www.paypal.com/xclick/business=gr%40grrrr.org&item_name=pyext&no_note=1&tax=0&currency_code=EUR
+Visit https://www.paypal.com/xclick/business=gr%40grrrr.org&item_name=absattr&no_note=1&tax=0&currency_code=EUR
 
 ----------------------------------------------------------------------------
 
@@ -41,6 +41,9 @@ bash ../flext/build.sh
 ----------------------------------------------------------------------------
 
 Version history:
+
+0.2.1:
+- externally passed attributes are promoted into the abstraction
 
 0.2.0:
 - added loadbang prioritization
