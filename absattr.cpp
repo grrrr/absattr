@@ -272,6 +272,9 @@ private:
 	static void Setup(t_classid cl)
     {
 	    post("absattr " VERSION ", (C)2006-2008 Thomas Grill");
+#ifdef FLEXT_DEBUG
+        post("--- DEBUG VERSION ---");
+#endif
 
         sym_attributes = MakeSymbol("attributes");
         sym_loadbang = MakeSymbol("loadbang");
