@@ -3,17 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 42;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E93DD6381B055446001A2FB8 /* absattr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E95145BA0E275411003D020C /* absattr.cpp */; };
+		E93DD6431B055451001A2FB8 /* absattr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E95145BA0E275411003D020C /* absattr.cpp */; };
+		E93DD64D1B055DAB001A2FB8 /* absattr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E95145BA0E275411003D020C /* absattr.cpp */; };
 		E95145BB0E275411003D020C /* absattr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E95145BA0E275411003D020C /* absattr.cpp */; };
 		E95145BC0E275411003D020C /* absattr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E95145BA0E275411003D020C /* absattr.cpp */; };
-		E98C3077078D948800EC0264 /* vecLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E98C3076078D948800EC0264 /* vecLib.framework */; };
-		E98C3078078D948800EC0264 /* vecLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E98C3076078D948800EC0264 /* vecLib.framework */; };
 		E9974E5B0770851500206F68 /* MaxAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9974DFA0770750400206F68 /* MaxAPI.framework */; };
 		E9974E5C0770851700206F68 /* MaxAudioAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9974DFB0770750400206F68 /* MaxAudioAPI.framework */; };
-		E99A3B770D35508600E692EF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E99A3B760D35508600E692EF /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,8 +30,10 @@
 
 /* Begin PBXFileReference section */
 		D2AAC09D05546B4700DB518D /* absattr.pd_darwin */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = absattr.pd_darwin; sourceTree = BUILT_PRODUCTS_DIR; };
+		E93DD63D1B055446001A2FB8 /* absattr.pd_darwin */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = absattr.pd_darwin; sourceTree = BUILT_PRODUCTS_DIR; };
+		E93DD6481B055451001A2FB8 /* absattr.pd_darwin */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = absattr.pd_darwin; sourceTree = BUILT_PRODUCTS_DIR; };
+		E93DD6521B055DAB001A2FB8 /* absattr.pd_darwin */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = absattr.pd_darwin; sourceTree = BUILT_PRODUCTS_DIR; };
 		E95145BA0E275411003D020C /* absattr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = absattr.cpp; sourceTree = "<group>"; };
-		E98C3076078D948800EC0264 /* vecLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = vecLib.framework; path = /System/Library/Frameworks/vecLib.framework; sourceTree = "<absolute>"; };
 		E9974DFA0770750400206F68 /* MaxAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MaxAPI.framework; path = /Library/Frameworks/MaxAPI.framework; sourceTree = "<absolute>"; };
 		E9974DFB0770750400206F68 /* MaxAudioAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MaxAudioAPI.framework; path = /Library/Frameworks/MaxAudioAPI.framework; sourceTree = "<absolute>"; };
 		E9974E53077083C700206F68 /* absattr.mxo */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = absattr.mxo; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,7 +45,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E98C3077078D948800EC0264 /* vecLib.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E93DD6351B055446001A2FB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E93DD6401B055451001A2FB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E93DD64B1B055DAB001A2FB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,7 +75,6 @@
 			files = (
 				E9974E5C0770851700206F68 /* MaxAudioAPI.framework in Frameworks */,
 				E9974E5B0770851500206F68 /* MaxAPI.framework in Frameworks */,
-				E98C3078078D948800EC0264 /* vecLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +86,9 @@
 			children = (
 				D2AAC09D05546B4700DB518D /* absattr.pd_darwin */,
 				E9974E53077083C700206F68 /* absattr.mxo */,
+				E93DD63D1B055446001A2FB8 /* absattr.pd_darwin */,
+				E93DD6481B055451001A2FB8 /* absattr.pd_darwin */,
+				E93DD6521B055DAB001A2FB8 /* absattr.pd_darwin */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,7 +106,6 @@
 		0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				E98C3076078D948800EC0264 /* vecLib.framework */,
 				E9974DFA0770750400206F68 /* MaxAPI.framework */,
 				E9974DFB0770750400206F68 /* MaxAudioAPI.framework */,
 			);
@@ -102,6 +125,27 @@
 
 /* Begin PBXHeadersBuildPhase section */
 		D2AAC09905546B4700DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E93DD6341B055446001A2FB8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E93DD63F1B055451001A2FB8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E93DD64A1B055DAB001A2FB8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -128,6 +172,57 @@
 			productReference = D2AAC09D05546B4700DB518D /* absattr.pd_darwin */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
+		E93DD6331B055446001A2FB8 /* pd inline */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E93DD6391B055446001A2FB8 /* Build configuration list for PBXNativeTarget "pd inline" */;
+			buildPhases = (
+				E93DD6341B055446001A2FB8 /* Headers */,
+				E93DD6351B055446001A2FB8 /* Frameworks */,
+				E93DD6371B055446001A2FB8 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "pd inline";
+			productName = xsample;
+			productReference = E93DD63D1B055446001A2FB8 /* absattr.pd_darwin */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		E93DD63E1B055451001A2FB8 /* pd static multi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E93DD6441B055451001A2FB8 /* Build configuration list for PBXNativeTarget "pd static multi" */;
+			buildPhases = (
+				E93DD63F1B055451001A2FB8 /* Headers */,
+				E93DD6401B055451001A2FB8 /* Frameworks */,
+				E93DD6421B055451001A2FB8 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "pd static multi";
+			productName = xsample;
+			productReference = E93DD6481B055451001A2FB8 /* absattr.pd_darwin */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		E93DD6491B055DAB001A2FB8 /* pd inline multi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E93DD64E1B055DAB001A2FB8 /* Build configuration list for PBXNativeTarget "pd inline multi" */;
+			buildPhases = (
+				E93DD64A1B055DAB001A2FB8 /* Headers */,
+				E93DD64B1B055DAB001A2FB8 /* Frameworks */,
+				E93DD64C1B055DAB001A2FB8 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "pd inline multi";
+			productName = xsample;
+			productReference = E93DD6521B055DAB001A2FB8 /* absattr.pd_darwin */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
 		E9974E52077083C700206F68 /* max static */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E9A5BC8E0A33819900AD9F03 /* Build configuration list for PBXNativeTarget "max static" */;
@@ -151,9 +246,16 @@
 /* Begin PBXProject section */
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+			};
 			buildConfigurationList = E9A5BC920A33819900AD9F03 /* Build configuration list for PBXProject "absattr" */;
-			compatibilityVersion = "Xcode 2.4";
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* xsample */;
 			productRefGroup = 034768DDFF38A45A11DB9C8B /* Products */;
 			projectDirPath = "";
@@ -161,6 +263,9 @@
 			targets = (
 				D2AAC09C05546B4700DB518D /* pd static */,
 				E9974E52077083C700206F68 /* max static */,
+				E93DD6331B055446001A2FB8 /* pd inline */,
+				E93DD63E1B055451001A2FB8 /* pd static multi */,
+				E93DD6491B055DAB001A2FB8 /* pd inline multi */,
 			);
 		};
 /* End PBXProject section */
@@ -170,7 +275,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E99A3B770D35508600E692EF /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +289,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E93DD6371B055446001A2FB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E93DD6381B055446001A2FB8 /* absattr.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E93DD6421B055451001A2FB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E93DD6431B055451001A2FB8 /* absattr.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E93DD64C1B055DAB001A2FB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E93DD64D1B055DAB001A2FB8 /* absattr.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E9974E50077083C700206F68 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -196,50 +324,190 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		E9A5BC8B0A33819900AD9F03 /* Development */ = {
+		E93DD63A1B055446001A2FB8 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				DEBUGGING_SYMBOLS = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_EXTENSION = pd_darwin;
-				GCC_FAST_MATH = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"FLEXT_SYS=2",
+					FLEXT_INLINE,
 				);
-				GCC_THREADSAFE_STATICS = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PD-devel)/src",
-					/usr/local/include/flext,
+					"$(PD)/src",
 				);
-				INSTALL_PATH = "$(PD)/extra";
-				LIBRARY_SEARCH_PATHS = "";
-				LIBRARY_STYLE = BUNDLE;
 				MACH_O_TYPE = mh_dylib;
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				OTHER_LDFLAGS = (
 					"-lflext-pd_sd",
 					"-undefined",
 					dynamic_lookup,
 				);
-				ZERO_LINK = YES;
+				PRODUCT_NAME = absattr;
 			};
 			name = Development;
 		};
-		E9A5BC8C0A33819900AD9F03 /* Deployment */ = {
+		E93DD63B1B055446001A2FB8 /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				DEPLOYMENT_LOCATION = YES;
-				DEPLOYMENT_POSTPROCESSING = YES;
-				DSTROOT = /;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_EXTENSION = pd_darwin;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"FLEXT_SYS=2",
+					FLEXT_INLINE,
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PD)/src",
+				);
+				INSTALL_PATH = "~/Library/Pure Data";
+				MACH_O_TYPE = mh_dylib;
+				OTHER_LDFLAGS = (
+					"-lflext-pd_s",
+					"-undefined",
+					dynamic_lookup,
+				);
+				PRODUCT_NAME = absattr;
+			};
+			name = Deployment;
+		};
+		E93DD63C1B055446001A2FB8 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_EXTENSION = pd_darwin;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PD)/src",
+				);
+				MACH_O_TYPE = mh_dylib;
+				PRODUCT_NAME = absattr;
+			};
+			name = Default;
+		};
+		E93DD6451B055451001A2FB8 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_EXTENSION = pd_darwin;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"FLEXT_SYS=2",
+					FLEXT_THREADS,
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PD)/src",
+				);
+				OTHER_LDFLAGS = (
+					"-lflext-pd_td",
+					"-undefined",
+					dynamic_lookup,
+				);
+				PRODUCT_NAME = absattr;
+			};
+			name = Development;
+		};
+		E93DD6461B055451001A2FB8 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_EXTENSION = pd_darwin;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"FLEXT_SYS=2",
+					FLEXT_THREADS,
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PD)/src",
+				);
+				INSTALL_PATH = "~/Library/Pure Data";
+				OTHER_LDFLAGS = (
+					"-lflext-pd_t",
+					"-undefined",
+					dynamic_lookup,
+				);
+				PRODUCT_NAME = absattr;
+			};
+			name = Deployment;
+		};
+		E93DD6471B055451001A2FB8 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_EXTENSION = pd_darwin;
+				GCC_PREPROCESSOR_DEFINITIONS = "FLEXT_SYS=2";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PD)/src",
+				);
+				PRODUCT_NAME = absattr;
+			};
+			name = Default;
+		};
+		E93DD64F1B055DAB001A2FB8 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_EXTENSION = pd_darwin;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"FLEXT_SYS=2",
+					FLEXT_INLINE,
+					FLEXT_THREADS,
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PD)/src",
+				);
+				MACH_O_TYPE = mh_dylib;
+				OTHER_LDFLAGS = (
+					"-undefined",
+					dynamic_lookup,
+				);
+				PRODUCT_NAME = absattr;
+			};
+			name = Development;
+		};
+		E93DD6501B055DAB001A2FB8 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_EXTENSION = pd_darwin;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"FLEXT_SYS=2",
+					FLEXT_INLINE,
+					FLEXT_THREADS,
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PD)/src",
+				);
+				INSTALL_PATH = "~/Library/Pure Data";
+				MACH_O_TYPE = mh_dylib;
+				OTHER_LDFLAGS = (
+					"-undefined",
+					dynamic_lookup,
+				);
+				PRODUCT_NAME = absattr;
+			};
+			name = Deployment;
+		};
+		E93DD6511B055DAB001A2FB8 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_EXTENSION = pd_darwin;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PD)/src",
+				);
+				MACH_O_TYPE = mh_dylib;
+				PRODUCT_NAME = absattr;
+			};
+			name = Default;
+		};
+		E9A5BC8B0A33819900AD9F03 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
 				EXECUTABLE_EXTENSION = pd_darwin;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -250,48 +518,54 @@
 					"$(PD)/src",
 					"$(flext)/source",
 				);
-				INSTALL_PATH = /Applications/pdext;
-				LIBRARY_SEARCH_PATHS = "$(flext)/build";
-				LIBRARY_STYLE = BUNDLE;
 				MACH_O_TYPE = mh_dylib;
-				MACOSX_DEPLOYMENT_TARGET = 10.3;
+				OTHER_LDFLAGS = (
+					"-lflext-pd_sd",
+					"-undefined",
+					dynamic_lookup,
+				);
+			};
+			name = Development;
+		};
+		E9A5BC8C0A33819900AD9F03 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_EXTENSION = pd_darwin;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"FLEXT_SYS=2",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PD)/src",
+					"$(flext)/source",
+				);
+				MACH_O_TYPE = mh_dylib;
 				OTHER_LDFLAGS = (
 					"-lflext-pd_s",
 					"-undefined",
 					dynamic_lookup,
 				);
-				ZERO_LINK = NO;
 			};
 			name = Deployment;
 		};
 		E9A5BC8D0A33819900AD9F03 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_EXTENSION = pd_darwin;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INPUT_FILETYPE = sourcecode.cpp.cpp;
-				GCC_PREPROCESSOR_DEFINITIONS = "FLEXT_SYS=2";
 				HEADER_SEARCH_PATHS = (
-					"$(PDApp)/src",
+					"$(inherited)",
+					"$(PD)/src",
 					"$(flext)/source",
 				);
-				INSTALL_PATH = "$(PD)/extra";
-				LIBRARY_SEARCH_PATHS = "$(flext)/build";
-				LIBRARY_STYLE = BUNDLE;
-				MACH_O_TYPE = mh_bundle;
-				OTHER_LDFLAGS = (
-					"-bundle_loader",
-					"$(PDApp)/bin/pd",
-				);
-				PRODUCT_NAME = xsample;
+				MACH_O_TYPE = mh_dylib;
 			};
 			name = Default;
 		};
 		E9A5BC8F0A33819900AD9F03 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -326,6 +600,7 @@
 		E9A5BC900A33819900AD9F03 /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -358,6 +633,7 @@
 		E9A5BC910A33819900AD9F03 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "FLEXT_SYS=1";
 				GENERATE_PKGINFO_FILE = YES;
 				HEADER_SEARCH_PATHS = (
@@ -385,36 +661,32 @@
 		E9A5BC930A33819900AD9F03 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GCC_ALTIVEC_EXTENSIONS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_FAST_MATH = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					_DEBUG,
 					FLEXT_USE_SIMD,
-					FLEXT_USE_NAMESPACE,
 					FLEXT_USE_CMEM,
+					"FLEXT_ATTRIBUTES=1",
 				);
-				HEADER_SEARCH_PATHS = (
-					"/Users/thomas/Develop/projects/audiofeatures++",
-					"/Users/thomas/Develop/packs/blitz-0.9",
-				);
-				PRODUCT_NAME = "$(PROJECT_NAME)";
+				HEADER_SEARCH_PATHS = "$(flext)/source";
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = absattr;
 			};
 			name = Development;
 		};
 		E9A5BC940A33819900AD9F03 /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					i386,
-					ppc,
-				);
-				GCC_ALTIVEC_EXTENSIONS = YES;
-				GCC_AUTO_VECTORIZATION = YES;
-				GCC_ENABLE_SSE3_EXTENSIONS = YES;
-				GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = YES;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				DEPLOYMENT_LOCATION = YES;
 				GCC_FAST_MATH = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
@@ -422,31 +694,60 @@
 					FLEXT_USE_CMEM,
 					"FLEXT_ATTRIBUTES=1",
 				);
-				GCC_STRICT_ALIASING = YES;
-				HEADER_SEARCH_PATHS = (
-					"/Users/thomas/Develop/projects/audiofeatures++",
-					"/Users/thomas/Develop/packs/blitz-0.9",
-				);
-				INSTALL_PATH = /Applications/pdext;
-				PRODUCT_NAME = "$(PROJECT_NAME)";
+				HEADER_SEARCH_PATHS = "$(flext)/source";
+				INSTALL_PATH = "~/Library/Pure Data";
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = absattr;
 			};
 			name = Deployment;
 		};
 		E9A5BC950A33819900AD9F03 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				HEADER_SEARCH_PATHS = (
-					"/Users/thomas/Develop/projects/audiofeatures++",
-					"/Users/thomas/Develop/packs/blitz-0.9",
-				);
-				OTHER_LDFLAGS = "-lfftwf3";
-				PRODUCT_NAME = "$(PROJECT_NAME)";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_FAST_MATH = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				HEADER_SEARCH_PATHS = "$(flext)/source";
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = absattr;
 			};
 			name = Default;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E93DD6391B055446001A2FB8 /* Build configuration list for PBXNativeTarget "pd inline" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E93DD63A1B055446001A2FB8 /* Development */,
+				E93DD63B1B055446001A2FB8 /* Deployment */,
+				E93DD63C1B055446001A2FB8 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		E93DD6441B055451001A2FB8 /* Build configuration list for PBXNativeTarget "pd static multi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E93DD6451B055451001A2FB8 /* Development */,
+				E93DD6461B055451001A2FB8 /* Deployment */,
+				E93DD6471B055451001A2FB8 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		E93DD64E1B055DAB001A2FB8 /* Build configuration list for PBXNativeTarget "pd inline multi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E93DD64F1B055DAB001A2FB8 /* Development */,
+				E93DD6501B055DAB001A2FB8 /* Deployment */,
+				E93DD6511B055DAB001A2FB8 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
 		E9A5BC8A0A33819900AD9F03 /* Build configuration list for PBXNativeTarget "pd static" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
